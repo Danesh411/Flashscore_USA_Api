@@ -36,7 +36,7 @@ def log_to_mongodb(log):
             raise ValueError(f"Invalid type for optional field: {field}")
 
     try:
-        client = MongoClient("mongodb://actowiz:tvvL4n=33=*_@51.222.244.92:27017/admin?authSource=admin")
+        client = MongoClient("")
         db = client["flashscoreusa_api"]
         collection = db["logs"]
         result = collection.insert_one(log)
